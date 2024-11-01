@@ -1,9 +1,19 @@
-﻿using System;
+using System;
 
 public class City
 {
     public string Name;
-    public int Population;
+    private int population;
+    public int Population
+    {
+        get { return population; }
+        set
+        {
+            if (value < 0)
+                throw new ArgumentException("Population cannot be negative");
+            population = value;
+        }
+    }
     public City(string name, int population)
     {
         Name = name;
