@@ -1,31 +1,13 @@
-﻿using System;
+using System;
 
 public class Employee
 {
-    private string name;
-    private int salary;
-
+    public string Name;
+    public int Salary;
     public Employee(string name, int salary)
     {
-        this.Name = name;
-        this.Salary = salary;
-    }
-
-    public string Name
-    {
-        get { return name; }
-        set { name = value; }
-    }
-
-    public int Salary
-    {
-        get { return salary; }
-        set
-        {
-            if (value < 0)
-                throw new ArgumentException("Salary cannot be negative.");
-            salary = value;
-        }
+        Name = name;
+        Salary = salary;
     }
     public static Employee operator +(Employee emp, int amount)
     {
