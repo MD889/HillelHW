@@ -51,8 +51,4 @@ public class Employee
     {
         return Salary.GetHashCode();
     }
-    public override string ToString()
-    {
-        return $"Name: {Name}, Salary: {Salary:C}";
-    }
 }
