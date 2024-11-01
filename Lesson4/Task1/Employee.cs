@@ -3,7 +3,17 @@ using System;
 public class Employee
 {
     public string Name;
-    public int Salary;
+    private int salary;
+    public int Salary
+    {
+        get { return salary; }
+        set
+        {
+            if (value < 0)
+                throw new ArgumentException("Salary cannot be negative");
+            salary = value;
+        }
+    }
     public Employee(string name, int salary)
     {
         Name = name;
